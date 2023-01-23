@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="Picture" enable="true" strideversion="1">
+    <javadoc xml:space="preserve">This class represents a simple picture. You can draw the picture using the draw method. But wait, there's more: being an electronic picture, it can be changed. You can set it to black-and-white display and back to colors (only after it's been drawn, of course).
+This class was written as an early example for teaching Java with BlueJ.
+@author  Michael Kölling and David J. Barnes @version 2016.02.29</javadoc>
+    <imports/>
+    <implements/>
+    <fields>
+        <variable access="private" type="Square" type-java="Square" name="wall" enable="true"/>
+        <variable access="private" type="Square" type-java="Square" name="window" enable="true"/>
+        <variable access="private" type="Triangle" type-java="Triangle" name="roof" enable="true"/>
+        <variable access="private" type="Circle" type-java="Circle" name="sun" enable="true"/>
+        <variable access="private" type="boolean" type-java="boolean" name="drawn" enable="true"/>
+    </fields>
+    <constructors>
+        <constructor access="public" enable="true">
+            <javadoc xml:space="preserve">Constructor for objects of class Picture</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <assign dest="wall" dest-java="wall" src="new Square ( )" src-java="new Square ( )" enable="true"/>
+                <assign dest="window" dest-java="window" src="new Square ( )" src-java="new Square ( )" enable="true"/>
+                <assign dest="roof" dest-java="roof" src="new Triangle ( )" src-java="new Triangle ( )" enable="true"/>
+                <assign dest="sun" dest-java="sun" src="new Circle ( )" src-java="new Circle ( )" enable="true"/>
+                <assign dest="drawn" dest-java="drawn" src="false" src-java="false" enable="true"/>
+            </body>
+        </constructor>
+    </constructors>
+    <methods>
+        <method access="public" type="void" type-java="void" name="draw" enable="true">
+            <javadoc xml:space="preserve">Draw this picture.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <if condition="! drawn" condition-java="! drawn" enable="true">
+                    <ifStatements>
+                        <call expression="wall . moveHorizontal ( - 140 )" expression-java="wall . moveHorizontal ( - 140 )" enable="true"/>
+                        <call expression="wall . moveVertical ( 20 )" expression-java="wall . moveVertical ( 20 )" enable="true"/>
+                        <call expression="wall . changeSize ( 120 )" expression-java="wall . changeSize ( 120 )" enable="true"/>
+                        <call expression="wall . makeVisible ( )" expression-java="wall . makeVisible ( )" enable="true"/>
+                        <call expression="window . changeColor ( &quot;black&quot; )" expression-java="window . changeColor ( &quot;black&quot; )" enable="true"/>
+                        <call expression="window . moveHorizontal ( - 120 )" expression-java="window . moveHorizontal ( - 120 )" enable="true"/>
+                        <call expression="window . moveVertical ( 40 )" expression-java="window . moveVertical ( 40 )" enable="true"/>
+                        <call expression="window . changeSize ( 40 )" expression-java="window . changeSize ( 40 )" enable="true"/>
+                        <call expression="window . makeVisible ( )" expression-java="window . makeVisible ( )" enable="true"/>
+                        <call expression="roof . changeSize ( 60 , 180 )" expression-java="roof . changeSize ( 60 , 180 )" enable="true"/>
+                        <call expression="roof . moveHorizontal ( 20 )" expression-java="roof . moveHorizontal ( 20 )" enable="true"/>
+                        <call expression="roof . moveVertical ( - 60 )" expression-java="roof . moveVertical ( - 60 )" enable="true"/>
+                        <call expression="roof . makeVisible ( )" expression-java="roof . makeVisible ( )" enable="true"/>
+                        <call expression="sun . changeColor ( &quot;yellow&quot; )" expression-java="sun . changeColor ( &quot;yellow&quot; )" enable="true"/>
+                        <call expression="sun . moveHorizontal ( 100 )" expression-java="sun . moveHorizontal ( 100 )" enable="true"/>
+                        <call expression="sun . moveVertical ( - 40 )" expression-java="sun . moveVertical ( - 40 )" enable="true"/>
+                        <call expression="sun . changeSize ( 80 )" expression-java="sun . changeSize ( 80 )" enable="true"/>
+                        <call expression="sun . makeVisible ( )" expression-java="sun . makeVisible ( )" enable="true"/>
+                        <assign dest="drawn" dest-java="drawn" src="true" src-java="true" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="setBlackAndWhite" enable="true">
+            <javadoc xml:space="preserve">Change this picture to black/white display</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <call expression="wall . changeColor ( &quot;black&quot; )" expression-java="wall . changeColor ( &quot;black&quot; )" enable="true"/>
+                <call expression="window . changeColor ( &quot;white&quot; )" expression-java="window . changeColor ( &quot;white&quot; )" enable="true"/>
+                <call expression="roof . changeColor ( &quot;black&quot; )" expression-java="roof . changeColor ( &quot;black&quot; )" enable="true"/>
+                <call expression="sun . changeColor ( &quot;black&quot; )" expression-java="sun . changeColor ( &quot;black&quot; )" enable="true"/>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="setColor" enable="true">
+            <javadoc xml:space="preserve">Change this picture to use color display</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <call expression="wall . changeColor ( &quot;red&quot; )" expression-java="wall . changeColor ( &quot;red&quot; )" enable="true"/>
+                <call expression="window . changeColor ( &quot;black&quot; )" expression-java="window . changeColor ( &quot;black&quot; )" enable="true"/>
+                <call expression="roof . changeColor ( &quot;green&quot; )" expression-java="roof . changeColor ( &quot;green&quot; )" enable="true"/>
+                <call expression="sun . changeColor ( &quot;yellow&quot; )" expression-java="sun . changeColor ( &quot;yellow&quot; )" enable="true"/>
+            </body>
+        </method>
+    </methods>
+</class>
