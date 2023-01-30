@@ -192,4 +192,6 @@ public class Triangle
             canvas.erase(this);
         }
     }
+    
+   
 }
