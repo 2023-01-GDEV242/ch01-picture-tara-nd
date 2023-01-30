@@ -78,8 +78,8 @@ public class Picture
             
         harvey.changeSize(60, 30);
             harvey.changeColor("yellow");
-            harvey.moveHorizontal(310);
-            harvey.moveVertical(220);
+            harvey.moveHorizontal(30);
+            harvey.moveVertical(30);
         harvey.makeVisible();
             
             drawn = true;
