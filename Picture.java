@@ -59,8 +59,8 @@ public class Picture
             roof.moveVertical(-60);
             roof.makeVisible();
             roof2.changeSize(20,30);
-            roof2.moveVertical(240);
-            roof2.moveHorizontal(200);
+            roof2.moveVertical(10);
+            roof2.moveHorizontal(40);
             roof2.makeVisible();
             roof2.changeColor("green");
             sun.changeColor("yellow");
@@ -72,8 +72,8 @@ public class Picture
         
         sun2.changeColor("red");
             sun2.changeSize(30);
-            sun2.moveHorizontal(240);
-            sun2.moveVertical(220);
+            sun2.moveHorizontal(10);
+            sun2.moveVertical(130);
         sun2.makeVisible();
             
         harvey.changeSize(60, 30);
